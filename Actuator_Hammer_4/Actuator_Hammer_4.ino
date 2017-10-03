@@ -56,15 +56,15 @@ class Ultrasonic_Sensor {
 
 #define ULTRASONIC1_THRESHOLD_VALUE_CM 20
 
-#define HAMMER_INACTIVE_TIME_MILLIS 3000
-#define HAMMER_ACTIVE_SMASH_TIME_MILLIS 550
-#define HAMMER_RETRIEVE_DELAY_PAUSE_TIME_MILLIS 1000
+#define HAMMER_INACTIVE_TIME_MILLIS 3000  //Time for which everything is stopped
+#define HAMMER_ACTIVE_SMASH_TIME_MILLIS 550 //Hammer in air going towards ground
+#define HAMMER_RETRIEVE_DELAY_PAUSE_TIME_MILLIS 1000  //Hammer on ground
 
-#define ENERGISE_RELAY_BY_LOGIC_LEVEL LOW  //Turn on the relay by giving it a low (Active low - COM connects to NO), enter HIGH if using without the breakout board
-#define ACTIVATE_RELAY_PIN 4  //COM - MOTOR, NC - GND, NO - 12V
-#define RETRIEVE_RELAY_PIN 5  //COM - MOTOR, NC - GND, NO - 12V
+#define ENERGISE_RELAY_BY_LOGIC_LEVEL HIGH  //Turn on the relay by giving it a low (Active low - COM connects to NO), enter HIGH if using without the breakout board
+#define ACTIVATE_RELAY_PIN 8  //COM - MOTOR, NC - GND, NO - 12V
+#define RETRIEVE_RELAY_PIN 6  //COM - MOTOR, NC - GND, NO - 12V
 
-#define LIMITER_SWITCH_PIN 6  //Use COM and NO
+#define LIMITER_SWITCH_PIN 5  //Use COM and NO
 
 Ultrasonic_Sensor Ultrasonic1;
 
@@ -122,6 +122,6 @@ void loop() {
 
   if (digitalRead(LIMITER_SWITCH_PIN) != HIGH) {  
     Retrieve_Hammer();
-  }
+  } 
   
 }
