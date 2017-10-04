@@ -54,11 +54,11 @@ class Ultrasonic_Sensor {
 #define ULTRASONIC_TX_PIN 2
 #define ULTRASONIC_RX_PIN 3
 
-#define ULTRASONIC1_THRESHOLD_VALUE_CM 20
+#define ULTRASONIC1_THRESHOLD_VALUE_CM 17
 
-#define HAMMER_INACTIVE_TIME_MILLIS 3000  //Time for which everything is stopped
+#define HAMMER_INACTIVE_TIME_MILLIS 2000  //Time for which everything is stopped
 #define HAMMER_ACTIVE_SMASH_TIME_MILLIS 550 //Hammer in air going towards ground
-#define HAMMER_RETRIEVE_DELAY_PAUSE_TIME_MILLIS 1000  //Hammer on ground
+#define HAMMER_RETRIEVE_DELAY_PAUSE_TIME_MILLIS 750  //Hammer on ground
 
 #define ENERGISE_RELAY_BY_LOGIC_LEVEL HIGH  //Turn on the relay by giving it a low (Active low - COM connects to NO), enter HIGH if using without the breakout board
 #define ACTIVATE_RELAY_PIN 8  //COM - MOTOR, NC - GND, NO - 12V
